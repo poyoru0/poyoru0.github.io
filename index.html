@@ -1,14 +1,34 @@
 <!DOCTYPE html>
+
+<!--index.html-->
+
 <html>
     <head>
-        <title>
-            テストサイト
-        </title>
+        <title>テストサイト</title>
+        <link rel="stylesheet" href="style.css"/>
     </head>
 
     <body>
-        <div class="title">
-            タイトル
+        <div class="main" id="questionScene">
+            <div class="title">
+                あなたは今日の夜ポテトを食べますよね？
+            </div>
+            <div class="button">
+                <div id="yes">
+                    はい
+                </div>
+                <div id="no">
+                    いいえ
+                </div>
+            </div>
         </div>
+
+        <div class="main" id="answerScene">
+            <div class="title">
+                そうだよね！
+            </div>
+        </div>
+
+        <script src="app.js"/>
     </body>
 </html>
