@@ -23,6 +23,7 @@
 #answerScene
 {
     display: none;
+    text-align: center;
 }
 
 .title
@@ -39,7 +40,6 @@
 #answerScene > .title
 {
     font-size: clamp(5px,10vw,300px);
-    margin-top: 20%;
 }
 
 .button
