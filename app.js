@@ -22,7 +22,7 @@ noBtn.onclick = function()
     if(count < 5)
     {
         yesBtn.style.fontSize = fontsizeY * (count * 0.5 + 2) + "px";
-        noBtn.style.fontSize = fontsizeN / (count * 0.5 + 1.5) + "px";
+        noBtn.style.fontSize = fontsizeN / (count * 0.2 + 1.5) + "px";
         count++;
     }
     else
