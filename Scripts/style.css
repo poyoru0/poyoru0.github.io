@@ -1,0 +1,75 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main
+{
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.2rem;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    overflow: hidden;
+}
+/*質問シーン*/
+#questionScene
+{
+    display: block;
+}
+
+#answerScene
+{
+    display: none;
+    text-align: center;
+}
+
+.title
+{
+    text-align: center;
+}
+
+#questionScene > .title
+{
+    font-size: clamp(5px,3vw,300px);
+    background-color: rgb(30, 50, 75);
+}
+
+#answerScene > .title
+{
+    font-size: clamp(5px,10vw,300px);
+}
+
+.button
+{
+    display: flex;
+    white-space: nowrap;
+}
+
+#yes
+{
+    cursor: pointer;
+    position: absolute;
+    color: greenyellow;
+    font-size: clamp(20px,10vw,200px);
+    /*位置調整*/
+    top: 30%;
+    left: 20%;
+
+    transition: 0.3s;
+}
+
+#no
+{
+    cursor: pointer;
+    position: absolute;
+    color: red;
+    font-size: clamp(20px,10vw,200px);
+    /*位置調整*/
+    top: 30%;
+    right: 20%;
+
+    transition: 0.3s;
+}
