@@ -53,10 +53,10 @@
     cursor: pointer;
     position: absolute;
     color: greenyellow;
-    font-size: clamp(5px,5vh,200px);
+    font-size: clamp(5px,10vw,200px);
     /*位置調整*/
     top: 30%;
-    left: 25%;
+    left: 20%;
 
     transition: 0.3s;
 }
@@ -66,10 +66,10 @@
     cursor: pointer;
     position: absolute;
     color: red;
-    font-size: clamp(5px,5vh,200px);
+    font-size: clamp(5px,10vw,200px);
     /*位置調整*/
     top: 30%;
-    right: 25%;
+    right: 20%;
 
     transition: 0.3s;
 }
