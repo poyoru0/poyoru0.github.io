@@ -46,7 +46,6 @@
 {
     display: flex;
     white-space: nowrap;
-    font-size: clamp(5px,5vw,300px);
 }
 
 #yes
@@ -54,7 +53,7 @@
     cursor: pointer;
     position: absolute;
     color: greenyellow;
-    font-size: clamp(5px,5vw,200px);
+    font-size: clamp(5px,7vw,200px);
     /*位置調整*/
     top: 30%;
     left: 25%;
@@ -67,7 +66,7 @@
     cursor: pointer;
     position: absolute;
     color: red;
-    font-size: clamp(5px,5vw,200px);
+    font-size: clamp(5px,7vw,200px);
     /*位置調整*/
     top: 30%;
     right: 25%;
