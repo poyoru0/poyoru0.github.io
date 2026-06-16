@@ -18,10 +18,18 @@
     margin-left: 2%;
     
 }
+/*カーソルが乗っているとき*/
 .menu #title:hover
 {
     color: rgb(150, 150, 150);
 }
+/*クリックしたとき*/
+.menu #title:active
+{
+    background-color: rgb(6, 62, 88);
+    color: rgb(150, 150, 150);
+}
+
 
 /*メニューの内容を非表示*/
 #hiddenLinks
@@ -58,10 +66,16 @@
 {
     cursor: pointer;
 }
-/*カーソルがかかったら色を変える*/
+/*カーソルが乗っているとき*/
 #home:hover
 {
-    color:rgb(150, 150, 150);
+    color: rgb(150, 150, 150);
+}
+/*クリックしたとき*/
+#home:active
+{
+    background-color: rgb(6, 62, 88);
+    color: rgb(150, 150, 150);
 }
 
 /*ゲーム一覧リンク*/
@@ -69,26 +83,33 @@
 {
     cursor: pointer;
 }
-/*カーソルがかかったら色を変える*/
+/*カーソルが乗っているとき*/
 #games:hover
 {
-    color:rgb(150, 150, 150);
+    color: rgb(150, 150, 150);
+}
+/*クリックしたとき*/
+#games:active
+{
+    background-color: rgb(6, 62, 88);
+    color: rgb(150, 150, 150);
 }
 
 /*問い合わせリンク*/
 #report
 {
     cursor: pointer;
-    /*カーソルがかかったら色を変える*/
-    :hover
-    {
-        background-color: rgb(6, 62, 88);
-    }
 }
 /*カーソルがかかったら色を変える*/
 #report:hover
 {
     color:rgb(150, 150, 150);
+}
+/*クリックしたとき*/
+#report:active
+{
+    background-color: rgb(6, 62, 88);
+    color: rgb(150, 150, 150);
 }
 
 /*プロフィールリンク*/
@@ -100,6 +121,12 @@
 #profile:hover
 {
     color:rgb(150, 150, 150);
+}
+/*クリックしたとき*/
+#profile:active
+{
+    background-color: rgb(6, 62, 88);
+    color: rgb(150, 150, 150);
 }
 
 /*PCmenu*/
@@ -160,13 +187,12 @@
             cursor: pointer;
 
             /*サイズ*/
-            width: 25%;
-            height: 25%;
-            margin-right: 5%;
-            margin-top: 2%;
+            width: 12vw;
+            margin-right: 10%;
+            margin-top: 5%;
         }
 
-        :hover
+        :active
         {
             background-color: rgb(6, 62, 88);
         }
