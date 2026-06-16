@@ -18,11 +18,6 @@
     margin-left: 2%;
     
 }
-/*カーソルが乗っているとき*/
-.menu #title:hover
-{
-    color: rgb(150, 150, 150);
-}
 /*クリックしたとき*/
 .menu #title:active
 {
@@ -34,7 +29,9 @@
 /*メニューの内容を非表示*/
 #hiddenLinks
 {
+    /*もとから隠しておく*/
     display: none;
+    visibility: hidden;
 
     /*背景画像*/
     background-image: url(/Materials/menuBox.png);
@@ -66,11 +63,6 @@
 {
     cursor: pointer;
 }
-/*カーソルが乗っているとき*/
-#home:hover
-{
-    color: rgb(150, 150, 150);
-}
 /*クリックしたとき*/
 #home:active
 {
@@ -82,11 +74,6 @@
 #games
 {
     cursor: pointer;
-}
-/*カーソルが乗っているとき*/
-#games:hover
-{
-    color: rgb(150, 150, 150);
 }
 /*クリックしたとき*/
 #games:active
@@ -100,11 +87,6 @@
 {
     cursor: pointer;
 }
-/*カーソルがかかったら色を変える*/
-#report:hover
-{
-    color:rgb(150, 150, 150);
-}
 /*クリックしたとき*/
 #report:active
 {
@@ -116,11 +98,6 @@
 #profile
 {
     cursor: pointer;
-}
-/*カーソルがかかったら色を変える*/
-#profile:hover
-{
-    color:rgb(150, 150, 150);
 }
 /*クリックしたとき*/
 #profile:active
@@ -162,6 +139,28 @@
     #hiddenLinks
     {
         display: none;
+    }
+    
+    /*カーソルが乗っているとき*/
+    .menu #title:hover
+    {
+        color: rgb(150, 150, 150);
+    }
+    #home:hover
+    {
+        color: rgb(150, 150, 150);
+    }
+    #games:hover
+    {
+        color: rgb(150, 150, 150);
+    }
+    #report:hover
+    {
+        color: rgb(150, 150, 150);
+    }
+    #profile:hover
+    {
+        color: rgb(150, 150, 150);
     }
 }
 
