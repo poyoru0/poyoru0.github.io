@@ -1,0 +1,180 @@
+.menu
+{
+    color: white;
+
+    tai
+    {
+        background-color: rgb(16, 72, 98);
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*ぽよルーム*/
+.menu #title
+{
+    cursor: pointer;
+    font-size: clamp(25px, 4vw, 100px);
+    margin-left: 2%;
+    
+}
+.menu #title:hover
+{
+    color: rgb(150, 150, 150);
+}
+
+/*メニューの内容を非表示*/
+#hiddenLinks
+{
+    display: none;
+
+    /*背景画像*/
+    background-image: url(/Materials/menuBox.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*boxサイズ*/
+    width: 30vw;
+    height: 25vh;
+
+    margin-left: auto;/*右寄せにする*/
+    line-height: 5vh;/*内容の高さ*/
+    display: flex;
+    flex-direction: column;/**縦並びにする*/
+    justify-content: center;
+    align-items: center;
+    p
+    {
+        padding: 0.3vh;
+        font-size: 3.5vw;
+        width: 75%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/*リンク類*/
+/*ホームリンク*/
+#home
+{
+    cursor: pointer;
+}
+/*カーソルがかかったら色を変える*/
+#home:hover
+{
+    color:rgb(150, 150, 150);
+}
+
+/*ゲーム一覧リンク*/
+#games
+{
+    cursor: pointer;
+}
+/*カーソルがかかったら色を変える*/
+#games:hover
+{
+    color:rgb(150, 150, 150);
+}
+
+/*問い合わせリンク*/
+#report
+{
+    cursor: pointer;
+    /*カーソルがかかったら色を変える*/
+    :hover
+    {
+        background-color: rgb(6, 62, 88);
+    }
+}
+/*カーソルがかかったら色を変える*/
+#report:hover
+{
+    color:rgb(150, 150, 150);
+}
+
+/*プロフィールリンク*/
+#profile
+{
+    cursor: pointer;
+}
+/*カーソルがかかったら色を変える*/
+#profile:hover
+{
+    color:rgb(150, 150, 150);
+}
+
+/*PCmenu*/
+@media (min-width:769px)
+{
+    .menu #poyoroomIcon
+    {
+        cursor: pointer;
+        /*サイズ*/
+        width: 8%;
+        height: auto;
+    }
+
+    .links
+    {
+        flex: 1;
+        text-align: right;
+
+        p
+        {
+            display: inline-block;
+            padding: 2%;
+            font-size: clamp(12px,1.5vw,50px);
+        }
+    }
+
+    /*メニューアイコンを消す*/
+    .linkIcon
+    {
+        visibility: hidden;
+    }
+
+    #hiddenLinks
+    {
+        display: none;
+    }
+}
+
+/*スマホmenu*/
+@media (max-width:768px)
+{
+    .menu #poyoroomIcon
+    {
+        cursor: pointer;
+        /*サイズ*/
+        width: 16%;
+        height: 16%;
+    }
+
+    /*メニュー表示用のアイコン*/
+    .linkIcon
+    {
+        flex: 1;
+        text-align: right;
+
+        #menuIcon
+        {
+            cursor: pointer;
+
+            /*サイズ*/
+            width: 25%;
+            height: 25%;
+            margin-right: 5%;
+            margin-top: 2%;
+        }
+
+        :hover
+        {
+            background-color: rgb(6, 62, 88);
+        }
+    }
+    
+    /*リンク部分を消す*/
+    .links
+    {
+        visibility: hidden;
+    }
+}

@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-
-<!--index.html-->
-
 <html>
     <head>
-        <title>テストサイト</title>
-        <link rel="stylesheet" href="style.css"/>
-        <meta property="og:title" content="">
-        <meta property="og:description" content="">
+        <link rel="icon" href="/Materials/poyoroom.png">
+        <title>ぽよルーム</title>
+        <!--ｃｓｓスタイル取得-->
+        <link rel="stylesheet" href="indexStyle.css">
+        <link rel="stylesheet" href="Scripts/MenuStyle.css">
+
+        <meta name="viewport" content="width=device-width, initial-space=1.0">
     </head>
 
     <body>
-        <div class="main" id="questionScene">
-            <div class="title">
-                次の土曜日一緒に過ごさない？
-            </div>
-            <div class="button">
-                <div id="yes">
-                    いいよ
-                </div>
-                <div id="no">
-                    やだ
+        <div class="main">
+            <!--上の帯部分-->
+            <div class="menu">
+                <tai>
+                    <img src="Materials/poyoroom.png" id="poyoroomIcon">
+                    <div id="title">ぽよルーム</div>
+                    <div class="links">
+                        <p id="home">ホーム</p>
+                        <p id="games">ゲーム一覧</p>
+                        <p id="report">問い合わせ</p>
+                        <p id="profile">プロフィール</p>
+                    </div>
+                    <div class="linkIcon">
+                        <img src="Materials/menu.png" id="menuIcon" onclick="MenuBotton()">
+                    </div>
+                </tai> 
+                <div id="hiddenLinks">
+                    <p id="home">ホーム</p>
+                    <p id="games">ゲーム一覧</p>
+                    <p id="report">問い合わせ</p>
+                    <p id="profile">プロフィール</p>
                 </div>
             </div>
         </div>
 
-        <div class="main" id="answerScene">
-            <img src="/Materials/happy.gif"></img>
-            <div class="title">
-                やった〜！
-            </div>
-        </div>
-
-        <script src="/Scripts/app.js"></script>
+        <script src="Scripts/Menu.js"></script>
     </body>
 </html>
