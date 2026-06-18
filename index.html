@@ -20,28 +20,96 @@
         <div class="main">
             <!--上の帯部分-->
             <div class="menu">
+                <!--帯ボックス-->
                 <tai>
-                    <img src="Materials/poyoroom.png" id="poyoroomIcon">
+                    <!--ぽよルームアイコン-->
+                    <div class="poyoroomIcon">
+                        <img src="Materials/poyoroom.png" id="poyoroomIcon">
+                    </div>
+                    <!--タイトル-->
                     <div id="title">ぽよルーム</div>
+                    <!--リンク-->
                     <div class="links">
-                        <p id="home">ホーム</p>
-                        <p id="games">ゲーム一覧</p>
+                        <p id="home" style="color: yellow">ホーム</p>
+                        <p id="games" onclick="location.href='/Scripts/Games.html'">ゲーム一覧</p>
                         <p id="report">問い合わせ</p>
                         <p id="profile">プロフィール</p>
                     </div>
+                    <!--スマホモードで表示するメニューアイコン-->
                     <div class="linkIcon">
-                        <img src="Materials/menu.png" id="menuIcon" onclick="MenuBotton()">
+                        <img src="/Materials/menu.png" id="menuIcon" onclick="MenuBotton()">
                     </div>
-                </tai> 
-                <div id="hiddenLinks">
-                    <p id="home">ホーム</p>
-                    <p id="games">ゲーム一覧</p>
+                </tai>
+                <!--スマホモードで表示されるメニュー-->
+                <hid id="hiddenLinks">
+                    <p id="home" style="color: yellow">ホーム</p>
+                    <p id="games" onclick="location.href='/Scripts/Games.html'">ゲーム一覧</p>
                     <p id="report">問い合わせ</p>
                     <p id="profile">プロフィール</p>
+                </hid>
+            </div>
+            <!--お知らせ-->
+            <div class="notice">
+                <!--タイトル-->
+                <div class="title">お知らせ</div>
+                <!--お知らせ画像ボックス-->
+                <div class="cm">
+                    <!--左矢印エリア-->
+                    <div>
+                        <
+                    </div>
+                    <!--画像エリアcssで出力-->
+                    <img id="imgBox">
+                    <!--右矢印エリア-->
+                    <div>
+                        >
+                    </div>
+                </div>
+            </div>
+            <!--コメントとシェア-->
+            <div class="others">
+                <!--コメント-->
+                <div class="comment">
+                    <!--アイコン-->
+                    <img src="/Materials/Icon.png" id="icon">
+                    <!--コメントゾーン-->
+                    <p>
+                        ウェブづくりを<br>頑張っています。
+                    </p>
+                </div>
+                <!--シェア-->
+                <div class="share">
+                    <!--説明-->
+                    <explain>
+                        レビュー、このサイトのシェアもよければ<br>
+                        よろしくお願いします。
+                    </explain>
+                    <!--シェアリンクゾーン-->
+                    <div class="shareBox">
+                        <!--シェア-->
+                        <p>
+                            シェア
+                        </p>
+                        <!--リンクボタン-->
+                        <div class="shareLinks">
+                            <!--X-->
+                            <a target="_blank" href="https://twitter.com/intent/tweet?text=%E3%81%A8%E3%81%82%E3%82%8B%E5%AD%A6%E7%94%9F%E3%81%8C%E3%82%B2%E3%83%BC%E3%83%A0%E5%85%B1%E6%9C%89%E7%94%A8%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E8%87%AA%E4%BD%9C%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E3%81%99%E3%80%82%0A%E3%81%9C%E3%81%B2%E8%A6%8B%E3%81%A6%E3%81%BF%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0Ahttps%3A%2F%2Fpoyoroom.github.io">
+                                <img src="/Materials/BtnX.png">
+                            </a>
+                            <!--Line-->
+                            <a target="_blank" href="https://social-plugins.line.me/lineit/share?url=https://poyoroom.github.io&text=とある学生がゲーム共有用で作っている自作ウェブサイトです。ぜひ見てみてください。">
+                                <img src="/Materials/BtnLine.png">
+                            </a>
+                            <!--Facebook-->
+                            <a target="_blank" href="https://www.facebook.com/share.php?u=https://poyoroom.github.io">
+                                <img src="/Materials/BtnFacebook.png">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <script src="Scripts/Menu.js"></script>
+        <script src="/Scripts/Menu.js"></script>
     </body>
 </html>

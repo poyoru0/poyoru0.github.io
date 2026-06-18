@@ -1,6 +1,6 @@
 //menu_js
-
 var hiddenMenu = document.getElementById("hiddenLinks");
+hiddenMenu.style.visibility = "hidden"
 
 function MenuBotton()
 {
