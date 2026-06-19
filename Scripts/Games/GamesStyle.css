@@ -29,9 +29,15 @@ a
     text-align: center;
     
     justify-content: center;
+
+    width: 100vw;
+    min-width: 1400px;
     /*ゲームのボックス*/
-    div
+    d
     {
+        display: flex;
+        flex-direction: column;
+
         width: 23vw;
         height: 30vw;
         margin-right: auto;
@@ -42,29 +48,224 @@ a
         /*ゲーム情報*/
         a
         {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            height: 80%;
             /*下線部消す*/
             text-decoration: none;
             /*ゲーム画像*/
-            img
+            .img
             {
-                border-radius: 5px;
-                margin-top: 2vw;
-                width: 20vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 100%;
+                height: 50%;
+                img
+                {
+                    height: 90%;
+                    width: 90%;
+                    border-radius: 5px;
+                }
             }
             /*タイトル*/
             p
             {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
                 white-space: normal;
                 color: white;
+
+                height: 50%;
+                width: 100%;
             }
         }
         /*レビューボタン*/
-        button
+        .button
         {
-            margin-top: 5vw;
-            width: 20vw;
-            height: 4vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20%;
+            width: 100%;
+
             font-size: 2vw;
+
+            button
+            {
+                height: 50%;
+                width: 80%;
+            }
+        }
+    }
+}
+
+/*レビューの画面エリア*/
+.reviewArea
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    height: calc(100vh - 8vw);
+    width: 100vw;
+    top: 8vw;
+    /*レビューカード*/
+    .reviewCard
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 20px;
+        width: 60%;
+        height: 80%;
+        background-color: rgb(209, 209, 209);
+        /*黒い枠*/
+        box-shadow: 
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px 2px 0 black,
+        2px 2px 0 black;
+
+        /*閉じるボタン*/
+        .close
+        {
+            cursor: pointer;
+
+            position: absolute;
+            top: 2%;
+            right: 2%;
+
+            font-size: 30px;
+            color: red;
+        }
+        /*レビュー文字表示*/
+        p
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 90%;
+            height: 15%;
+            
+            font-size: clamp(25px,2vw,50px);
+        }
+
+        /*タイトル*/
+        .reviewGameTitle
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 90%;
+            height: 20%;
+            
+            font-size: clamp(20px,2.5vw,100px);
+        }
+
+        /*星で採点*/
+        .review
+        {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            height: 20%;
+            width: 100%;
+            
+            font-size: clamp(20px,2vw,100px);
+            /*評価*/
+            p
+            {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+
+                height: 100%;
+                width: 40%;
+            }
+            /*評価の星*/
+            .stars
+            {
+                cursor: pointer;
+
+                display: flex;
+                align-items: center;
+                justify-content: left;
+
+                height: 100%;
+                width: 5dvb;
+
+                font-size: 4vw;
+
+                color: rgb(127,127,127);
+
+                #star1
+                {
+                    color: yellow;
+                }
+            }
+        }
+
+        /*レビューコメント*/
+        .comment
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            height: 40%;
+            width: 100%;
+
+            p
+            {
+                width: 100%;
+                height: 20%;
+            }
+            /*コメント入力エリア*/
+            textarea
+            {
+                width: 80%;
+                height: 60%;
+
+                font-size: 20px;
+
+                border-radius: 5px;
+            }
+        }
+
+        /*送信ボタン*/
+        .sendBtn
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 15%;
+            width: 100%;
+
+            button
+            {
+                text-align: center;
+                align-items: center;
+
+                height: 50%;
+                width: 10%;
+
+                font-size: clamp(10px,1vw,50px);
+            }
         }
     }
 }
@@ -81,8 +282,10 @@ a
         text-align: center;
 
         justify-content: center;
+
+        min-width: 0;
         /*ゲームのボックス*/
-        div
+        d
         {
             margin: auto;
             /*サイズ*/
@@ -94,24 +297,93 @@ a
             a
             {
                 /*ゲーム画像*/
-                img
+                .img
                 {
-                    margin-top: 2vw;
-                    width: 30vw;
-                }
-                /*タイトル*/
-                p
-                {
-                    font-size: 5vw;
+                    height: 60%;
+                    img
+                    {
+                        width: 70%;
+                        height: 80%;
+                    }
                 }
             }
             /*レビューボタン*/
-            button
+            .button
             {
-                margin-top: 5vw;
-                width: 35vw;
-                height: 8vw;
-                font-size: 4vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                height: 20%;
+                width: 100%;
+
+                button
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    font-size: 12px;
+                    width: 60%;
+                    height: 60%;
+                }
+            }
+        }
+    }
+
+    .reviewArea
+    {
+        height: calc(100vh - 25vw);
+        
+        position: absolute;
+        top: 25vw;
+
+        .reviewCard
+        {
+            width: 80%;
+            height: 80%;
+
+            .close
+            {
+                top: 0%;
+            }
+
+            p
+            {
+                font-size: 8vw;
+            }
+
+            .reviewGameTitle
+            {
+                display: flex;
+                flex-direction: column;
+                white-space: normal;
+                width: 100%;
+            }
+
+            .review
+            {
+                .stars div
+                {
+                    font-size: 8vw;
+                }
+            }
+
+            .comment
+            {
+                textarea
+                {
+                    font-size: 15px;
+                }
+            }
+
+            .sendBtn
+            {
+                button
+                {
+                    width: 20%;
+                    font-size: 15px;
+                }
             }
         }
     }

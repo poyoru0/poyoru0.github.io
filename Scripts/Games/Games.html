@@ -50,6 +50,36 @@
         </div>
         <!--ゲーム表示エリア-->
         <div class="gamesArea" id="gamesArea"></div>
+        <!--レビュー画面-->
+        <div class="reviewArea"  id="reviewArea">
+            <!--レビューカード-->
+            <div class="reviewCard">
+                <!--閉じるボタン-->
+                <div class="close" onclick="CloseReviewBtn()">✖</div>
+                <p>レビュー</p>
+                <!--ゲームのタイトルを表示-->
+                <div class="reviewGameTitle" id="reviewGameTitle"></div>
+                <!--評価-->
+                <div class="review" id="review">
+                    <p>評価:</p>
+                    <div class="stars">
+                        <div id="star1" onclick="ReviwScore(1)">★</div>
+                        <div id="star2" onclick="ReviwScore(2)">☆</div>
+                        <div id="star3" onclick="ReviwScore(3)">☆</div>
+                        <div id="star4" onclick="ReviwScore(4)">☆</div>
+                        <div id="star5" onclick="ReviwScore(5)">☆</div>
+                    </div>
+                </div>
+                <!--コメント-->
+                <div class="comment">
+                    <p>コメント(任意)</p>
+                    <textarea id="reviewComment"></textarea>
+                </div>
+                <div class="sendBtn">
+                    <button onclick="SendReview()">送信</button>
+                </div>
+            </div>
+        </div>
     </div>
     
     <script src="/Scripts/Games/GamesSystem.js"></script>
