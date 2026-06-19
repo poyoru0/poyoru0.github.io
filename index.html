@@ -4,8 +4,8 @@
         <link rel="icon" href="/Materials/poyoroom.png">
         <title>ぽよルーム</title>
         <!--ｃｓｓスタイル取得-->
-        <link rel="stylesheet" href="indexStyle.css">
-        <link rel="stylesheet" href="Scripts/MenuStyle.css">
+        <link rel="stylesheet" href="/indexStyle.css">
+        <link rel="stylesheet" href="/Scripts/Menu/MenuStyle.css">
         <!--表示設定-->
         <meta property="og:title" content="ぽよルーム">
         <meta property="og:description" content="">
@@ -31,9 +31,9 @@
                     <!--リンク-->
                     <div class="links">
                         <p id="home" style="color: yellow">ホーム</p>
-                        <p id="games" onclick="location.href='/Scripts/Games.html'">ゲーム一覧</p>
-                        <p id="report">問い合わせ</p>
-                        <p id="profile">プロフィール</p>
+                        <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
+                        <p id="report" onclick="location.href='/Scripts/Report/Report.html'">問い合わせ</p>
+                        <p id="profile" onclick="location.href='/Scripts/Profile/Profile.html'">プロフィール</p>
                     </div>
                     <!--スマホモードで表示するメニューアイコン-->
                     <div class="linkIcon">
@@ -43,9 +43,9 @@
                 <!--スマホモードで表示されるメニュー-->
                 <hid id="hiddenLinks">
                     <p id="home" style="color: yellow">ホーム</p>
-                    <p id="games" onclick="location.href='/Scripts/Games.html'">ゲーム一覧</p>
-                    <p id="report">問い合わせ</p>
-                    <p id="profile">プロフィール</p>
+                    <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
+                    <p id="report" onclick="location.href='/Scripts/Report/Report.html'">問い合わせ</p>
+                    <p id="profile" onclick="location.href='/Scripts/Profile/Profile.html'">プロフィール</p>
                 </hid>
             </div>
             <!--お知らせ-->
@@ -110,6 +110,6 @@
             </div>
         </div>
 
-        <script src="/Scripts/Menu.js"></script>
+        <script src="/Scripts/Menu/Menu.js"></script>
     </body>
 </html>

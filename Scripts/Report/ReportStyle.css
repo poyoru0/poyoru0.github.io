@@ -1,0 +1,470 @@
+*/*初期化*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    text-decoration: none;
+}
+
+.main
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(38, 38, 38);
+    overflow: auto;
+}
+
+/*フォームエリア*/
+.foamArea
+{
+    display: flex;
+    height: 70vh;
+    width: 100vw;
+    min-width: 1400px;
+
+    align-items: center;
+    justify-content: center;
+
+    .foam
+    {
+        display: flex;
+        height: 80%;
+        width: 70%;
+
+        border-radius: 50px;
+        background: linear-gradient(to right,rgb(209, 209, 209) 35%,rgb(174, 174, 174) 35%);
+
+        /*詳細部分*/
+        .explain
+        {
+            width: 35%;
+            height: 100%;
+
+            text-align: center;
+
+            .title
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                height: 30%;
+                width: 100%;
+
+                font-size: clamp(24px,1.7vw,100px);
+                color: rgb(16, 72, 98);
+            }
+
+            p
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                height: 70%;
+
+                font-size: clamp(20px,1.3vw,100px);
+                color: black;
+            }
+        }
+
+        .inputTextArea
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+
+            width: 65%;
+            height: 100%;
+            .attention
+            {
+                height: 10%;
+                font-size: clamp(20px,1.5vw,25px);
+            }
+
+            .name
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 80%;
+                height: 10%;
+
+                /*名前の入力名と入力部分*/
+                div
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    width: 100%;
+                    height: 100%;
+
+                    gap: 1vw;
+                    /*入力題*/
+                    p
+                    {
+                        font-size: calmp(15px,1vw,25px);
+                    }
+
+                    /*入力部分*/
+                    input
+                    {
+                        width: 80%;
+                        height: 70%;
+                        font-size: clamp(15px,1vw,25px);
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .address
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+
+                width: 80%;
+                height: 20%;
+
+                .title
+                {
+                    width: 60%;
+                    height: 40%;
+                    text-align: left;
+                }
+
+                input
+                {
+                    height: 50%;
+                    width: 60%;
+                    min-width: 400px;
+                    font-size: clamp(20px,1.5vw,25px);
+                    border-radius: 5px;
+                }
+            }
+
+            .report
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 40%;
+
+                .title
+                {
+                    width: 80%;
+                    text-align: left;
+                }
+
+                .input
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: start;
+
+                    white-space: normal;
+
+                    width: 80%;
+                    height: 60%;
+                    font-size: clamp(15px,1vw,25px);
+                    border-radius: 5px;
+                }
+            }
+
+            .send
+            {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+
+                height: 20%;
+                width: 80%;
+
+                button
+                {
+                    height: 50px;
+                    width: 100px;
+                    width: clamp(87px,10%,100px);
+                }
+            }
+        }
+    }
+}
+
+/*サイト専用SNS*/
+.sns
+{
+    width: 100%;
+    height: calc(100vh - 8vw - 70vh);
+
+    .comment
+    {
+        display: flex;
+        height: 50%;
+        width: 50%;
+        align-items:flex-end;
+        text-align: left;
+        margin-left: 2vw;
+
+        color: white;
+    }
+
+    .links
+    {
+        height: 50%;
+        align-items: end;
+        justify-content: end;
+
+        .button
+        {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-right: auto;
+            height: 5vw;
+            min-height: 50px;
+            width: 50%;
+            margin-left: 2vw;
+            margin-bottom: 2vh;
+            background-color: rgb(127, 127, 127);
+            
+            p
+            {
+                font-size: 2vw;
+            }
+
+            div
+            {
+                display: flex;
+                gap: 2vw;
+                a
+                {
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    flex-direction: column;
+                    img
+                    {
+                        width: 80%;
+                        height: 80%;
+                    }
+                    p
+                    {
+                        font-size: 1vw;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*スマホ版*/
+@media (max-width:768px)
+{
+    /*フォーム*/
+    .foamArea
+    {
+        height: 250vw;
+        min-width: 0px;
+        /*カード*/
+        .foam
+        {
+            display: flex;
+            flex-direction: column;
+            height: 90%;
+            width: 80%;
+            background: linear-gradient(to bottom,rgb(209, 209, 209) 35%,rgb(174, 174, 174) 35%);
+            
+            /*説明部分*/
+            .explain
+            {
+                display: flex;
+                flex-direction: column;
+
+                width: 100%;
+                height: 35%;
+
+                .title
+                {
+                    width: 100%;
+                    height: 20%;
+                    text-align: center;
+                    font-size: 5vw;
+                }
+
+                p
+                {
+                    width: 100%;
+                    height: 80%;
+
+                    font-size: 4vw;
+                }
+            }
+
+            /*入力部分*/
+            .inputTextArea
+            {
+                width: 100%;
+                height: 65%;
+
+                .attention
+                {
+                    display: flex;
+                    align-items: center;
+
+                    width: 90%;
+                    height: 15%;
+                    white-space: normal;
+                    font-size: clamp(15px,5vw,30px);
+                }
+
+                /*名前入力*/
+                .name
+                {
+                    display: flex;
+
+                    height: 10%;
+                    width: 80%;
+
+                    gap: 10px;
+
+                    div
+                    {
+                        display: flex;
+                        flex-direction: column;
+
+                        p
+                        {
+                            width: 100%;
+                            text-align: left;
+                        }
+
+                        input
+                        {
+                            width: 100%;
+                            height: 50%;
+                        }
+                    }
+                }
+
+                /*アドレス入力部分*/
+                .address
+                {
+                    width: 90%;
+                    height: 10%;
+
+                    .title
+                    {
+                        display: flex;
+                        align-items: center;
+
+                        width: 100%;
+                        height: 50%;
+                    }
+
+                    input
+                    {
+                        width: 100%;
+                        min-width: 0;
+                        height: 50%;
+                    }
+                }
+
+                .report
+                {
+                    height: 45%;
+
+                    .title
+                    {
+                        display: flex;
+                        align-items: center;
+                        height: 10%;
+                        width: 90%;
+                    }
+
+                    .input
+                    {
+                        width: 90%;
+                    }
+                }
+
+                .send
+                {
+                    display: flex;
+                    justify-content: center;
+
+                    height: 20%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /*専用SNS*/
+    .sns
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 15vh;
+        text-align: center;
+
+        .links
+        {
+            position: absolute;
+            bottom: 2vh;
+            display: block;
+            text-align: center;
+            align-items: center;
+            height: 25vw;
+            width: 100%;
+
+            .button
+            {
+                display: block;
+                margin: auto auto;
+                align-items: center;
+                flex-direction: column;
+                height: 20vw;
+                width: 80%;
+                background-color: rgb(127, 127, 127);
+                p
+                {
+                    font-size: 3vw;
+                    height: 5vw;
+                }
+
+                div
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 15vw;
+                    gap: 8vw;
+                    a
+                    {
+                        img
+                        {
+                            width: 18vw;
+                            height: 10vw;
+                        }
+                        p
+                        {
+                            font-size: 3vw;
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--アイコン-->
+    <link rel="icon" href="/Materials/poyoroom.png">
+    <title>ぽよルーム</title>
+    <!--スタイルを適応させる-->
+    <link rel="stylesheet" href="/Scripts/Report/ReportStyle.css">
+    <link rel="stylesheet" href="/Scripts/Menu/MenuStyle.css">
+    
+    <!--表示設定-->
+    <meta property="og:title" content="ぽよルーム">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://poyoroom.github.io/">
+    <meta property="og:type" content="website">
+    <!--設定-->
+    <meta name="viewport" content="width=device-width, initial-space=1.0">
+</head>
+<body>
+    <div class="main">
+        <!--上の帯部分-->
+        <div class="menu">
+            <!--帯ボックス-->
+            <tai>
+                <!--ぽよルームアイコン-->
+                <a class="poyoroomIcon" href="/index.html">
+                    <img src="/Materials/poyoroom.png" id="poyoroomIcon">
+                </a>
+                <!--タイトル-->
+                <a id="title" href="/index.html">ぽよルーム</a>
+                <!--リンク-->
+                <div class="links">
+                    <p id="home" onclick="location.href='/index.html'">ホーム</p>
+                    <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
+                    <p id="report" style="color: yellow">問い合わせ</p>
+                    <p id="profile" onclick="location.href='/Scripts/Profile/Profile.html'">プロフィール</p>
+                </div>
+                <!--スマホモードで表示するメニューアイコン-->
+                <div class="linkIcon">
+                    <img src="/Materials/menu.png" id="menuIcon" onclick="MenuBotton()">
+                </div>
+            </tai>
+            <!--スマホモードで表示されるメニュー-->
+            <hid id="hiddenLinks">
+                <p id="home" onclick="location.href='/index.html'">ホーム</p>
+                <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
+                <p id="report" style="color: yellow">問い合わせ</p>
+                <p id="profile" onclick="location.href='/Scripts/Profile/Profile.html'">プロフィール</p>
+            </hid>
+        </div>
+        <!--フォームエリア-->
+        <div class="foamArea">
+            <!--フォームカード-->
+            <div class="foam">
+                <!--説明部分-->
+                <div class="explain">
+                    <div class="title">ご相談・お問い合わせフォーム</div>
+                    <p>
+                        「作ってほしいゲームのリクエスト<br>
+                        「バグの報告」<br>
+
+                        などお気軽にお問い合わせください。<br>
+
+                        個人的なやり取り、相談など<br>
+                        ございましたら、下の専用SNS<br>
+                        (InstagramまたはX)<br>
+                        からDMをお願いします。
+
+                    </p>
+                </div>
+                <!--入力部分-->
+                <div class="inputTextArea">
+                    <div class="attention">必要事項をフォームにご記入の上、送信ボタンを押してください。</div>
+                    <!--名前部分-->
+                    <div class="name">
+                        <!--姓-->
+                        <div class="lastName">
+                            <p>姓</p>
+                            <input type="text" id="lastName">
+                        </div>
+                        <!--名-->
+                        <div class="firstName">
+                            <p>名</p>
+                            <input type="text" id="firstName">
+                        </div>
+                    </div>
+                    <!--アドレス部分-->
+                    <div class="address">
+                        <div class="title">E-mailアドレス</div>
+                        <input type="text" id="address">
+                    </div>
+                    <!--問い合わせ内容-->
+                    <div class="report">
+                        <div class="title">問い合わせ内容</div>
+                        <textarea class="input" id="foamReport"></textarea>
+                    </div>
+                    <!--送信ボタン-->
+                    <div class="send">
+                        <button onclick="SendReport()">送信ボタン</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--SNS-->
+        <div class="sns">
+            <div class="links">
+                <div class="button">
+                    <p>このサイト専用SNS</p>
+                    <div>
+                        <!--Instagram-->
+                        <a target="_blank" href="https://instagram.com/poyoroom">
+                            <img src="/Materials/BtnInstagram.png">
+                            <p>Instagram</p>
+                        </a>
+                        <!--Youtube-->
+                        <a target="_blank" href="https://youtube.com/@ぽよルーム">
+                            <img src="/Materials//YoutubeBtn.png">
+                            <p>Youtube</p>
+                        </a>
+                        <!--X-->
+                        <a target="_blank" href="https://x.com/poyoroomWeb">
+                            <img src="/Materials/BtnX.png">
+                            <p>X</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ｊｓファイル-->
+    <script src="/Scripts/Report/ReportSystem.js"></script>
+    <script src="/Scripts/Menu/Menu.js"></script>
+</body>
+</html>

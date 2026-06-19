@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--アイコン-->
+    <link rel="icon" href="/Materials/poyoroom.png">
+    <title>ぽよルーム</title>
+    <!--スタイルを適応させる-->
+    <link rel="stylesheet" href="/Scripts/Profile/ProfileStyle.css">
+    <link rel="stylesheet" href="/Scripts/Menu/MenuStyle.css">
+    
+    <!--表示設定-->
+    <meta property="og:title" content="ぽよルーム">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://poyoroom.github.io/">
+    <meta property="og:type" content="website">
+    <!--設定-->
+    <meta name="viewport" content="width=device-width, initial-space=1.0">
+</head>
+<body>
+    <div class="main">
+        <!--上の帯部分-->
+        <div class="menu">
+            <!--帯ボックス-->
+            <tai>
+                <!--ぽよルームアイコン-->
+                <a class="poyoroomIcon" href="/index.html">
+                    <img src="/Materials/poyoroom.png" id="poyoroomIcon">
+                </a>
+                <!--タイトル-->
+                <a id="title" href="/index.html">ぽよルーム</a>
+                <!--リンク-->
+                <div class="links">
+                    <p id="home" onclick="location.href='/index.html'">ホーム</p>
+                    <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
+                    <p id="report" onclick="location.href='/Scripts/Report/Report.html'">問い合わせ</p>
+                    <p id="profile" style="color: yellow">プロフィール</p>
+                </div>
+                <!--スマホモードで表示するメニューアイコン-->
+                <div class="linkIcon">
+                    <img src="/Materials/menu.png" id="menuIcon" onclick="MenuBotton()">
+                </div>
+            </tai>
+            <!--スマホモードで表示されるメニュー-->
+            <hid id="hiddenLinks">
+                <p id="home" onclick="location.href='/index.html'">ホーム</p>
+                <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
+                <p id="report" onclick="location.href='/Scripts/Report/Report.html'">問い合わせ</p>
+                <p id="profile" style="color: yellow">プロフィール</p>
+            </hid>
+        </div>
+        <!--プロフィール-->
+        <div class="profile">
+            <!--自己紹介-->
+            <div class="introduction">
+                <div>
+                    <a target="_blank" href="https://x.com/poyoru_0">
+                        <img src="/Materials/Icon.png" id="icon">
+                        <p class="name">ぽよる</p>
+                    </a>
+                    <pre>
+                        生年月日:2005年9月11日<br>
+                        出身地  :愛知県春日井市<br>
+                        職業    :学生<br>
+                        趣味	:車、スノーボード
+                    </pre>
+                </div>
+            </div>
+            <!--余談-->
+            <div class="memo">
+                <div class="title">
+                    名前の由来
+                </div>
+                <p>
+                    ただの思い付きです。<br>
+                    特に意味はないです。
+                </p>
+            </div>
+            <!--コメント-->
+            <div class="comment">
+                <div class="box">
+                    <div class="title">コメント</div>
+                    <p>
+                        ゲームプログラマーを目指しています。<br>
+                        (28卒)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--SNS-->
+        <div class="sns">
+            <div class="comment">
+                当サイト専用SNSでゲームの追加情報などを発信しているので<br>
+                フォローお願いします。<br>
+                もし僕宛に何かあればX、InstagramのDMにてお願いします。
+            </div>
+            <div class="links">
+                <div class="button">
+                    <p>このサイト専用SNS</p>
+                    <div>
+                        <!--Instagram-->
+                        <a target="_blank" href="https://instagram.com/poyoroom">
+                            <img src="/Materials/BtnInstagram.png">
+                            <p>Instagram</p>
+                        </a>
+                        <!--Youtube-->
+                        <a target="_blank" href="https://youtube.com/@ぽよルーム">
+                            <img src="/Materials//YoutubeBtn.png">
+                            <p>Youtube</p>
+                        </a>
+                        <!--X-->
+                        <a target="_blank" href="https://x.com/poyoroomWeb">
+                            <img src="/Materials/BtnX.png">
+                            <p>X</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--メニューのｊｓファイル-->
+    <script src="/Scripts/Menu/Menu.js"></script>
+</body>
+</html>
