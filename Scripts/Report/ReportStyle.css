@@ -235,13 +235,19 @@ body , html
             display: flex;
             justify-content: left;
             align-items: center;
+
             margin-right: auto;
+
             height: 5vw;
-            min-height: 50px;
+            min-height: 70px;
             width: 50%;
+
             margin-left: 2vw;
             margin-bottom: 2vh;
+
             background-color: rgb(127, 127, 127);
+
+            border-radius: 5px;
             
             p
             {
@@ -280,7 +286,7 @@ body , html
     /*フォーム*/
     .foamArea
     {
-        height: 250vw;
+        height: 220vw;
         min-width: 0px;
 
         margin-top: 7.5vh;
@@ -330,10 +336,10 @@ body , html
                     display: flex;
                     align-items: center;
 
-                    width: 90%;
+                    width: 95%;
                     height: 15%;
                     white-space: normal;
-                    font-size: clamp(15px,5vw,30px);
+                    font-size: clamp(15px,4.5vw,30px);
                 }
 
                 /*名前入力*/
@@ -429,7 +435,7 @@ body , html
 
         .links
         {
-            position: absolute;
+            position: fixed;
             bottom: 2vh;
             display: block;
             text-align: center;
@@ -444,7 +450,7 @@ body , html
                 align-items: center;
                 flex-direction: column;
                 height: 20vw;
-                width: 80%;
+                width: 85%;
                 background-color: rgb(127, 127, 127);
                 p
                 {
