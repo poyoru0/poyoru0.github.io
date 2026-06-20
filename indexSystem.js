@@ -23,9 +23,10 @@ fetch("/Datas/NoticeData.json")
 
         card.appendChild(img);
         dotArea.appendChild(dot);
-        //お知らせの数を加算
-        maxIndex++;
     });
+    //お知らせの数を加算
+    maxIndex = notices.length;
+    console.log(maxIndex);
 });
 
 function UpdateDots()
