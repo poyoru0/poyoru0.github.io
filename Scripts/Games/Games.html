@@ -51,14 +51,17 @@
         <!--ゲーム表示エリア-->
         <div class="gamesArea" id="gamesArea"></div>
         <!--レビュー画面-->
-        <div class="reviewArea"  id="reviewArea">
+        <div class="reviewArea">
             <!--レビューカード-->
-            <div class="reviewCard">
+            <div class="reviewCard" id="reviewCard">
                 <!--閉じるボタン-->
                 <div class="close" onclick="CloseReviewBtn()">✖</div>
                 <p>レビュー</p>
                 <!--ゲームのタイトルを表示-->
-                <div class="reviewGameTitle" id="reviewGameTitle"></div>
+                <div class="reviewGameTitle">
+                    <p>タイトル</p>
+                    <div id="reviewGameTitle"></div>
+                </div>
                 <!--評価-->
                 <div class="review" id="review">
                     <p>評価:</p>
@@ -78,6 +81,10 @@
                 <div class="sendBtn">
                     <button onclick="SendReview()">送信</button>
                 </div>
+            </div>
+            <!--送信完了通知-->
+            <div class="notification">
+                <img id="sendNotifination" src="/Materials/Sended.png">
             </div>
         </div>
     </div>

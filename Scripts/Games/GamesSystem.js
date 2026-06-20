@@ -5,7 +5,7 @@ const gamesArea = document.getElementById('gamesArea');
 const areaWidth = gamesArea.clientWidth;
 
 //jsonからゲームの情報を持ってきてそれをサイトに表示する
-fetch("/Scripts/Games/GamesData.json")
+fetch("/Datas/GameData.json")
 .then(response => response.json())
 //gamesにjsonを代入
 .then(games => {
@@ -54,7 +54,7 @@ fetch("/Scripts/Games/GamesData.json")
 
 //-----レビュー系-----
 
-const reviewcard = document.getElementById("reviewArea");
+const reviewcard = document.getElementById("reviewCard");
 reviewcard.style.visibility = "hidden";
 
 var reviewScore = 1;
@@ -65,12 +65,22 @@ function CloseReviewBtn()
     reviewcard.style.visibility = "hidden";
 }
 
+var gT;
 //レビューボタンを押すと押したゲームのタイトルが入ってレビューカードを出す
 function OpenReviewBtn(title)
 {
-    
     const gameTitle = document.getElementById("reviewGameTitle");
-    gameTitle.textContent = "タイトル:" + title;
+    gT = title;
+    
+    //PCなら
+    if(768 < areaWidth)
+    {
+        gameTitle.textContent = ":" + title;
+    }
+    else
+    {
+        gameTitle.textContent = title;
+    }
 
     reviewcard.style.visibility = "visible";
 }
@@ -120,10 +130,10 @@ function ReviwScore(score)
     }
 }
 
+//書いたレビュー内容をdiscordに送信する
 async function SendReview()
 {
     //送信する内容を取得
-    const gameTitle = document.getElementById("reviewGameTitle").textContent;
     const score = reviewScore;
     const comment = document.getElementById("reviewComment").value;
 
@@ -131,9 +141,19 @@ async function SendReview()
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
-            title: gameTitle,
+            title: gT,
             review: score,
             impression: comment
         })
     });
+
+    CloseReviewBtn();
+
+    const popup = document.getElementById("sendNotifination");
+    popup.classList.remove("show");
+
+    // アニメーションをリセット
+    void popup.offsetWidth;
+
+    popup.classList.add("show");
 }
