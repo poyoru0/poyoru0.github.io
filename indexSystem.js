@@ -11,24 +11,27 @@ fetch("/Datas/NoticeData.json")
 .then(response => response.json())
 //noticesにjsonを代入
 .then(notices => {
+    let count = 0;
     notices.forEach(element => {
         //imgタグを作成
         const img = document.createElement('img');
         //dotタグを追加
         const dot = document.createElement('dot');
-        if(maxIndex == 0)
+        if(count == 0)
             dot.classList.add("active");
 
         img.src = element.image;
 
         card.appendChild(img);
         dotArea.appendChild(dot);
+        count++;
     });
     //お知らせの数を加算
-    maxIndex = notices.length;
+    maxIndex = notices.length - 1;
     console.log(maxIndex);
 });
 
+//ドットの更新
 function UpdateDots()
 {
     const allDot = document.querySelectorAll("dot");
@@ -46,7 +49,7 @@ function rightBtn()
 
     index++;
 
-    if(maxIndex <= index)
+    if(maxIndex < index)
     {
         index = 0;
         scrollWidth = maxIndex * -card.clientWidth;
@@ -69,7 +72,7 @@ function leftBtn()
 
     if(index < 0)
     {
-        index = maxIndex - 1;
+        index = maxIndex;
         scrollWidth = maxIndex * card.clientWidth;
     }
 
