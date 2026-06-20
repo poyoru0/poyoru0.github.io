@@ -6,6 +6,11 @@
     white-space: nowrap;
 }
 
+body , html
+{
+    background-color: rgb(38, 38, 38);
+}
+
 .main
 {
     width: 100vw;
