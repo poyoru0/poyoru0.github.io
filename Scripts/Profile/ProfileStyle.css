@@ -161,29 +161,46 @@ body , html
             margin-bottom: 2vh;
             background-color: rgb(127, 127, 127);
             
+            border-radius: 5px;
+
             p
             {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+
                 font-size: 2vw;
+
+                width: 40%;
+                height: 100%;
             }
 
             div
             {
                 display: flex;
-                gap: 2vw;
+
+                width: calc(100% - 40% - 2vw);
+
                 a
                 {
                     display: flex;
                     text-align: center;
                     align-items: center;
                     flex-direction: column;
+
+                    width: calc(100% / 3);
+
                     img
                     {
-                        width: 80%;
-                        height: 80%;
+                        width: 50%;
+                        aspect-ratio: 33 / 17;
                     }
                     p
                     {
-                        font-size: 1vw;
+                        justify-content: center;
+                        width: 100%;
+
+                        font-size: clamp(15px,1vw,25px);
                         color: black;
                     }
                 }
@@ -291,7 +308,7 @@ body , html
     {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         height: calc(100vh - 25vw - 50vh);
         text-align: center;
 
@@ -311,25 +328,32 @@ body , html
 
         .links
         {
+            position: fixed;
+            bottom: 2vh;
             display: block;
             text-align: center;
             align-items: center;
+
             height: 25vw;
             width: 100%;
 
             .button
             {
-                display: block;
-                margin: auto auto;
-                align-items: center;
+                display: flex;
                 flex-direction: column;
+
+                margin: auto auto;
+
+                align-items: center;
+                justify-content: center;
+                
                 height: 20vw;
-                width: 80%;
+                width: 85%;
                 background-color: rgb(127, 127, 127);
                 p
                 {
                     font-size: 3vw;
-                    height: 5vw;
+                    height: 20%;
                 }
 
                 div
@@ -337,7 +361,7 @@ body , html
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 15vw;
+                    height: 80%;
                     gap: 8vw;
                     a
                     {
