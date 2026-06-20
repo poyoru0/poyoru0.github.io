@@ -28,7 +28,6 @@ fetch("/Datas/NoticeData.json")
     });
     //お知らせの数を加算
     maxIndex = notices.length - 1;
-    console.log(maxIndex);
 });
 
 //ドットの更新

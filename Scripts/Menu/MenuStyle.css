@@ -1,22 +1,82 @@
 .menu
 {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 100vw;
+    height: 10vh;
+    min-height: 80px;
+    min-width: 1400px;
+
     color: white;
+
+    z-index: 9999;
     background-color: rgb(16, 72, 98);
-    position: relative;
+
     tai
     {
         display: flex;
         align-items: center;
-    }
-}
+        justify-content: left;
+        width: 100%;
+        height: 100%;
+        
+        /*アイコン*/
+        .poyoroomIcon
+        {
+            cursor: pointer;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            
+            img
+            {
+                height: 100%;
+                aspect-ratio: 1 / 1;
+            }
+        }
 
-/*ぽよルーム*/
-.menu #title
-{
-    cursor: pointer;
-    font-size: clamp(25px, 4vw, 100px);
-    color: white;
-    text-decoration: none;
+        /*タイトル*/
+        #title
+        {
+            cursor: pointer;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            color: white;
+            
+            height: 100%;
+            width: 20%;
+            
+            font-size: clamp(25px,3vw,55px);
+        }
+
+        /*目次*/
+        .links
+        {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+
+            width: calc(100% - 10vh - 20%);
+            height: 100%;
+
+            p
+            {
+                margin-right: 5%;
+                font-size: clamp(15px,1vw,20px);
+            }
+        }
+
+        /*通常時はメニューは格納しないので隠す*/
+        .linkIcon
+        {
+            visibility: hidden;
+            width: 0px;
+            height: 0px;
+        }
+    }
 }
 /*クリックしたとき*/
 .menu #title:active
@@ -26,11 +86,9 @@
 }
 
 /*メニューの内容を非表示*/
-#hiddenLinks
+.menu #hiddenLinks
 {
-    position: absolute;
-    /*もとから隠しておく*/
-    display: none;
+    position: fixed;
 
     /*背景画像*/
     background-image: url(/Materials/menuBox.png);
@@ -38,10 +96,10 @@
     background-repeat: no-repeat;
     /*boxサイズ*/
     width: 30vw;
-    height: 25vh;
+    height: 35vh;
     /*右に寄せる*/
     transform: translateX(70vw);
-    top: 100%;
+    top: 7.5vh;
     z-index: 9999;
 
     margin-left: auto;/*右寄せにする*/
@@ -50,6 +108,20 @@
     flex-direction: column;/**縦並びにする*/
     justify-content: center;
     align-items: center;
+
+    p
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: calc(100% / 4);
+        
+        z-index: 9999;
+
+        font-size: 18px;
+    }
 }
 
 /*リンク類*/
@@ -101,123 +173,75 @@
     color: rgb(150, 150, 150);
 }
 
-/*PCmenu*/
-@media (min-width:769px)
-{
-    .menu
-    {
-        height: 8vw;
-        min-width: 1400px;
-
-        tai
-        {
-            height: 8vw;
-        }
-
-        #poyoroomIcon
-        {
-            cursor: pointer;
-            /*サイズ*/
-            width: 7vw;
-            height: 7vw;
-        }
-    }
-
-    .links
-    {
-        flex: 1;
-        text-align: right;
-
-        p
-        {
-            display: inline-block;
-            padding: 2%;
-            font-size: clamp(12px,1.5vw,50px);
-        }
-    }
-
-    /*メニューアイコンを消す*/
-    .linkIcon
-    {
-        position: absolute;
-        left: 0;
-
-        visibility: hidden;
-    }
-
-    #hiddenLinks
-    {
-        width: 0;
-        position: absolute;
-        left: 0;
-        visibility: visible;
-
-
-        p
-        {
-            width: 0;
-        }
-    }
-    
-    /*カーソルが乗っているとき*/
-    .menu #title:hover
-    {
-        color: rgb(150, 150, 150);
-    }
-    #home:hover
-    {
-        color: rgb(150, 150, 150);
-    }
-    #games:hover
-    {
-        color: rgb(150, 150, 150);
-    }
-    #report:hover
-    {
-        color: rgb(150, 150, 150);
-    }
-    #profile:hover
-    {
-        color: rgb(150, 150, 150);
-    }
-}
-
 /*スマホmenu*/
 @media (max-width:768px)
 {
     .menu
     {
-        height: 25vw;
-        
+        height: 7.5vh;
+        min-height: 0;
+        min-width: 0;
+
         tai
         {
-            height: 25vw;
-        }
+            /*アイコン*/
+            .poyoroomIcon
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*サイズ*/
+                height: 100%;
+                aspect-ratio: 1 / 1;
 
-        #poyoroomIcon
-        {
-            cursor: pointer;
-            text-align: center;
-            /*サイズ*/
-            height: 23vw;
-        }
+                img
+                {
+                    height: 90%;
+                }
+            }
 
-        /*アイコン*/
-        .poyoroomIcon
-        {
-            text-align: center;
-            width: 25vw;
-        }
+            /*ぽよルーム*/
+            #title
+            {
+                font-size: clamp(25px, 4vw, 100px);
 
-        /*ぽよルーム*/
-        #title
-        {
-            cursor: pointer;
-            text-align: left;
+                width: calc(100% - 15vh);
+            }
 
-            font-size: clamp(25px, 4vw, 100px);
+            .links
+            {
+                visibility: hidden;
+                width: 0px;
+            }
 
-            width: 50vw;
+            /*メニュー表示用のアイコン*/
+            .linkIcon
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                visibility: visible;
+
+                height: 100%;
+                width: auto;
+                aspect-ratio: 1 / 1;
+
+                text-align: center;
+                #menuIcon
+                {
+                    cursor: pointer;
+
+                    /*サイズ*/
+                    height: 60%;
+                    aspect-ratio: 1 / 1;
+                }
+
+                :active
+                {
+                    background-color: rgb(6, 62, 88);
+                }
+            }
         }
     }
 
@@ -226,24 +250,5 @@
     {
         position: absolute;
         visibility: hidden;
-    }
-
-    /*メニュー表示用のアイコン*/
-    .linkIcon
-    {
-        width: calc(100vw - 25vw - 50vw);
-        text-align: center;
-        #menuIcon
-        {
-            cursor: pointer;
-
-            /*サイズ*/
-            height: 18vw;
-        }
-
-        :active
-        {
-            background-color: rgb(6, 62, 88);
-        }
     }
 }

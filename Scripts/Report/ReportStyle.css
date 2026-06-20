@@ -27,6 +27,8 @@
     align-items: center;
     justify-content: center;
 
+    margin-top: 10vh;
+
     .foam
     {
         display: flex;
@@ -275,6 +277,8 @@
     {
         height: 250vw;
         min-width: 0px;
+
+        margin-top: 7.5vh;
         /*カード*/
         .foam
         {

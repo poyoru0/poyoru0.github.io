@@ -5,7 +5,7 @@ const gamesArea = document.getElementById('gamesArea');
 const areaWidth = gamesArea.clientWidth;
 
 //jsonからゲームの情報を持ってきてそれをサイトに表示する
-fetch("/Datas/GameData.json")
+fetch("/Datas/GamesData.json")
 .then(response => response.json())
 //gamesにjsonを代入
 .then(games => {
@@ -14,7 +14,8 @@ fetch("/Datas/GameData.json")
     //配列処理
     games.forEach(element => {
         //divの生成
-        const d = document.createElement("d");
+        const d = document.createElement("div");
+        d.classList.add("gameCard");
 
         //タイトルの文字数取得
         const titleString = JSON.stringify(element.title);

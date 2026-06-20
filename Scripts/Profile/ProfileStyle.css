@@ -22,6 +22,8 @@
     height: 50%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    margin-top: 10vh;
 }
 
 /*自己紹介部分*/
@@ -197,6 +199,8 @@
         align-items: start;
 
         height: 50vh;
+
+        margin-top: 7.5vh;
 
         .introduction
         {
