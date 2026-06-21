@@ -95,10 +95,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     /*boxサイズ*/
-    width: 30vw;
-    height: 35vh;
+    width: 40vw;
+    height: 40vh;
     /*右に寄せる*/
-    transform: translateX(70vw);
+    transform: translateX(60vw);
     top: 7.5vh;
     z-index: 9999;
 

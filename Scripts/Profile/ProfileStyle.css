@@ -251,8 +251,10 @@ body , html
 
                     .name
                     {
-                        width: 50%;
+                        width: 100%;
                         text-align: center;
+
+                        font-size: clamp(15px,5vw,30px);
                     }
                 }
                 pre

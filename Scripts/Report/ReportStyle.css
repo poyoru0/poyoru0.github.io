@@ -236,12 +236,17 @@ body , html
             justify-content: left;
             align-items: center;
             margin-right: auto;
+
             height: 5vw;
             min-height: 50px;
             width: 50%;
+
             margin-left: 2vw;
             margin-bottom: 2vh;
+            
             background-color: rgb(127, 127, 127);
+
+            border-radius: 5px;
             
             p
             {
