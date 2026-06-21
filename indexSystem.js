@@ -5,6 +5,10 @@ const card = document.querySelector(".newsCard");
 const dotArea = document.querySelector(".dotArea");
 let maxIndex = 0;
 let index = 0;
+let autoRightScroll;
+
+//自動スクロールをオン
+StartAutoScroll();
 
 //jsonから画像数、urlを取得してお知らせページに出す
 fetch("/Datas/NoticeData.json")
@@ -60,6 +64,8 @@ function rightBtn()
     });
 
     UpdateDots();
+
+    ResetAutoScroll();
 }
 
 //左の画像にスクロールする
@@ -81,4 +87,23 @@ function leftBtn()
     });
 
     UpdateDots();
+
+    ResetAutoScroll();
+}
+
+//自動スクロールをスタートさせる
+function StartAutoScroll()
+{
+    //３秒おきに実行
+    autoRightScroll = setInterval(() => {
+        rightBtn();
+    },3000);
+}
+
+//自動スクロールをリセットさせる
+function ResetAutoScroll()
+{
+    clearInterval(autoRightScroll);
+    autoRightScroll = null;
+    StartAutoScroll();
 }
