@@ -1,125 +1,120 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="icon" href="/Materials/poyoroom.png">
-        <title>ぽよルーム</title>
-        <!--ｃｓｓスタイル取得-->
-        <link rel="stylesheet" href="/indexStyle.css">
-        <link rel="stylesheet" href="/Scripts/Menu/MenuStyle.css">
-        <!--表示設定-->
-        <meta property="og:title" content="ぽよルーム">
-        <meta property="og:description" content="">
-        <meta property="og:image" content="">
-        <meta property="og:url" content="https://poyoroom.github.io/">
-        <meta property="og:type" content="website">
-        <meta name="theme-color" content="#204b69">
-        <!--設定-->
-        <meta name="viewport" content="width=device-width, initial-space=1.0">
-    </head>
-
-    <body>
-        <div class="main">
-            <!--上の帯部分-->
-            <div class="menu">
-                <!--帯ボックス-->
-                <tai>
-                    <!--ぽよルームアイコン-->
-                    <div class="poyoroomIcon">
-                        <img src="Materials/poyoroom.png" id="poyoroomIcon">
-                    </div>
-                    <!--タイトル-->
-                    <div id="title">ぽよルーム</div>
-                    <!--リンク-->
-                    <div class="links">
-                        <p id="home" style="color: yellow">ホーム</p>
-                        <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
-                        <p id="report" onclick="location.href='/Scripts/Report/Report.html'">問い合わせ</p>
-                        <p id="profile" onclick="location.href='/Scripts/Profile/Profile.html'">プロフィール</p>
-                    </div>
-                    <!--スマホモードで表示するメニューアイコン-->
-                    <div class="linkIcon">
-                        <img src="/Materials/menu.png" id="menuIcon" onclick="MenuBotton()">
-                    </div>
-                </tai>
-                <!--スマホモードで表示されるメニュー-->
-                <hid id="hiddenLinks">
-                    <p id="home" style="color: yellow">ホーム</p>
-                    <p id="games" onclick="location.href='/Scripts/Games/Games.html'">ゲーム一覧</p>
-                    <p id="report" onclick="location.href='/Scripts/Report/Report.html'">問い合わせ</p>
-                    <p id="profile" onclick="location.href='/Scripts/Profile/Profile.html'">プロフィール</p>
-                </hid>
-            </div>
-            <!--ホーム画面-->
-            <div class="home">
-                <!--お知らせ-->
-                <div class="notice">
-                    <!--タイトル-->
-                    <div class="title">お知らせ</div>
-                    <!--お知らせ画像ボックス-->
-                    <div class="cm">
-                        <!--左矢印エリア-->
-                        <p onclick="leftBtn()">
-                            <
-                        </p>
-                        <!--画像エリア-->
-                        <div class="newsCard">
-
-                        </div>
-                        <!--右矢印エリア-->
-                        <p onclick="rightBtn()">
-                            >
-                        </p>
-                    </div>
-                    <!--ドット-->
-                    <div class="dotArea">
-                    </div>
-                </div>
-                <!--コメントとシェア-->
-                <div class="others">
-                    <!--コメント-->
-                    <div class="comment">
-                        <!--アイコン-->
-                        <img src="/Materials/Icon.png" id="icon">
-                        <!--コメントゾーン-->
-                        <div class="mes">
-                            <p>ウェブづくりを<br>頑張っています。</p>
-                        </div>
-                    </div>
-                    <!--シェア-->
-                    <div class="share">
-                        <!--説明-->
-                        <explain>
-                            レビュー、このサイトのシェアもよければ<br>
-                            よろしくお願いします。
-                        </explain>
-                        <!--シェアリンクゾーン-->
-                        <div class="shareBox">
-                            <!--シェア-->
-                            <p>
-                                シェア
-                            </p>
-                            <!--リンクボタン-->
-                            <div class="shareLinks">
-                                <!--X-->
-                                <a target="_blank" href="https://twitter.com/intent/tweet?text=%E3%81%A8%E3%81%82%E3%82%8B%E5%AD%A6%E7%94%9F%E3%81%8C%E3%82%B2%E3%83%BC%E3%83%A0%E5%85%B1%E6%9C%89%E7%94%A8%E3%81%A7%E4%BD%9C%E3%81%A3%E3%81%A6%E3%81%84%E3%82%8B%E8%87%AA%E4%BD%9C%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%81%A7%E3%81%99%E3%80%82%0A%E3%81%9C%E3%81%B2%E8%A6%8B%E3%81%A6%E3%81%BF%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%80%82%0Ahttps%3A%2F%2Fpoyoroom.github.io">
-                                    <img src="/Materials/BtnX.png">
-                                </a>
-                                <!--Line-->
-                                <a target="_blank" href="https://social-plugins.line.me/lineit/share?url=https://poyoroom.github.io&text=とある学生がゲーム共有用で作っている自作ウェブサイトです。ぜひ見てみてください。">
-                                    <img src="/Materials/BtnLine.png">
-                                </a>
-                                <!--Facebook-->
-                                <a target="_blank" href="https://www.facebook.com/share.php?u=https://poyoroom.github.io">
-                                    <img src="/Materials/BtnFacebook.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | WebglTEST</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+  </head>
+  <body>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
         </div>
-        <!--JSファイル-->
-        <script src="/Scripts/Menu/Menu.js"></script>
-        <script src="/indexSystem.js"></script>
-    </body>
+      </div>
+      <div id="unity-footer">
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">WebglTEST</div>
+      </div>
+    </div>
+    <script>
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/新しいフォルダー.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/新しいフォルダー.data.gz",
+        frameworkUrl: buildUrl + "/新しいフォルダー.framework.js.gz",
+        codeUrl: buildUrl + "/新しいフォルダー.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "WebglTEST",
+        productVersion: "0.1",
+        showBanner: unityShowBanner,
+      };
+
+      // By default, Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        container.className = "unity-mobile";
+        canvas.className = "unity-mobile";
+
+        // To lower canvas resolution on mobile devices to gain some
+        // performance, uncomment the following line:
+        // config.devicePixelRatio = 1;
+
+
+      } else {
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+                loadingBar.style.display = "none";
+                fullscreenButton.onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+              }).catch((message) => {
+                alert(message);
+              });
+            };
+
+      document.body.appendChild(script);
+
+    </script>
+  </body>
 </html>
