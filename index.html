@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Game</title>
+    <title>Unity WebGL Player | ふるもぎ</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=100% height=100% tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=540 height=960 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -17,11 +17,11 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
+      <div id="unity-footer">
         <div id="unity-fullscreen-button"></div>
       </div>
     </div>
     <script>
-      
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -38,7 +38,7 @@
       // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          //warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
         }
         var div = document.createElement('div');
         div.innerHTML = msg;
@@ -55,26 +55,17 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/新しいフォルダー.loader.js";
+      var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/新しいフォルダー.data",
-        frameworkUrl: buildUrl + "/新しいフォルダー.framework.js",
-        codeUrl: buildUrl + "/新しいフォルダー.wasm",
+        dataUrl: buildUrl + "/Build.data.br",
+        frameworkUrl: buildUrl + "/Build.framework.js.br",
+        codeUrl: buildUrl + "/Build.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "WebglTEST",
-        productVersion: "0.1",
+        productName: "ふるもぎ",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
       };
-      var fs = document.createElement("script");
-      fs.src = loaderUrl;
-      fs.onload = () => {
-        loadingBar.style.display = "none";
-        createUnityInstance().then((unityInstance) => {
-          unityInstance.SetFullscreen(1);
-        })
-      }
-      document.body.appendChild(fs);
 
       // By default, Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
@@ -101,8 +92,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "540px";
+        canvas.style.height = "960px";
       }
 
       loadingBar.style.display = "block";
